@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-md-3 mb-2" *ngFor="let list of todoLists; let i = index">
+    <div class="card">
+      <div (click)="removeList(i)" class="card-header bg-light-pink txt-dark pixel-font pointer-cursor">
+        {{ list.name }}
+      </div>
+      <ul class="list-group list-group-flush">
+        <li (click)="toggleItem(item)" class="list-group-item pixel-font pointer-cursor" *ngFor="let item of sortTodoItems(list.todoItems)"
+            [ngClass]="{'bg-light': !item.done, 'bg-light-sec': item.done, 'text-through': item.done}">
+          {{ item.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

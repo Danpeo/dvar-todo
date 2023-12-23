@@ -1,0 +1,16 @@
+<div *ngFor="let item of items; let i = index" class="row">
+  <div class="col mb-2">
+    <div class="form-group">
+      <input type="text" [(ngModel)]="item.name" class="form-control bg-light-sec txt-white no-border pixel-font"
+             id="todoName" placeholder="Todo">
+    </div>
+  </div>
+  <div class="col mb-2">
+    <button (click)="removeItem(i)" class="btn btn-outline-primary pixel-font" type="button">-</button>
+  </div>
+</div>
+<div class="row mt-2">
+  <div class="col">
+    <button class="btn btn-outline-primary pixel-font" type="button" (click)="addItem()">+</button>
+  </div>
+</div>

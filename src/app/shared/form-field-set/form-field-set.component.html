@@ -1,0 +1,7 @@
+<div class="form-group mb-3">
+  <label [for]="labelFor" class="txt-light-pink {{labelTextStyles}}">{{label}}</label>
+  <ng-content></ng-content>
+  <ng-container *ngIf="helpText">
+    <small id="{{helpTextId}}" class="form-text text-muted {{helpTextStyles}}">{{helpText}}</small>
+  </ng-container>
+</div>
