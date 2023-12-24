@@ -30,6 +30,7 @@ export class DisplayTodoComponent {
 
   toggleItem(item: TodoItem) {
     item.done = !item.done;
+    this.todoListService.update(this.todoLists);
   }
 
   removeList(index: number) {
